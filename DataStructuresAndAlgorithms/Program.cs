@@ -1,11 +1,72 @@
 ﻿using DataStructuresAndAlgorithms.DataStructures.Fundamentals;
 using DataStructuresAndAlgorithms.DataStructures.Advanced;
+using DataStructuresAndAlgorithms.Algorithms.Sorting;
 
 namespace DataStructuresAndAlgorithms
 {
     public static class Program
     {
         public static void Main()
+        {
+        }
+
+        private static void BucketSort()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            var sorter = new BucketSort();
+            sorter.Sort(numbers, 4);
+            Console.WriteLine(String.Join(',', numbers));
+        }
+
+        private static void CountingSortAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            var sorter = new CountingSort();
+            sorter.Sort(numbers, 12);
+            Console.WriteLine(String.Join(',', numbers));
+        }
+
+        private static void QuickSortAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            var sorter = new QuickSort();
+            sorter.Sort(numbers);
+            Console.WriteLine(String.Join(',', numbers));
+        }
+
+        private static void MergeSortAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            var sorter = new MergeSort();
+            sorter.Sort(numbers);
+            Console.WriteLine(String.Join(',', numbers));
+        }
+
+        private static void InsertionSortAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            var sorter = new InsertionSort();
+            sorter.Sort(numbers);
+            Console.WriteLine(String.Join(',', numbers));
+        }
+
+        private static void SelectionSortAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            var sorter = new SelectionSort();
+            sorter.Sort(numbers);
+            Console.WriteLine(String.Join(',', numbers));
+        }
+
+        private static void BubbleSortAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            var sorter = new BubbleSort();
+            sorter.Sort(numbers);
+            Console.WriteLine(String.Join(',', numbers));
+        }
+
+        private static void WeightedGraphMethods()
         {
             var weightedGraph = new WeightedGraph();
 
@@ -22,7 +83,7 @@ namespace DataStructuresAndAlgorithms
 
             Console.WriteLine("Shortest Path:");
             Console.WriteLine(String.Join(',', weightedGraph.GetShortestPath("a", "d")));
-            
+
             Console.WriteLine("Has cycle: " + weightedGraph.HasCycle());
 
             var tree = weightedGraph.GetMinimumSpanningTree();
