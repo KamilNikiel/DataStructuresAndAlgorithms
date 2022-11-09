@@ -9,12 +9,47 @@ namespace DataStructuresAndAlgorithms
     {
         public static void Main()
         {
+
+        }
+
+        private static void ExponentialSearchAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            QuickSort.Sort(numbers);
+            var index = ExponentialSearch.Search(numbers, 4);
+            Console.WriteLine(index);
+        }
+
+        private static void JumpSearchAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            QuickSort.Sort(numbers);
+            var index = JumpSearch.Search(numbers, 4);
+            Console.WriteLine(index);
+        }
+
+        private static void TernarySearchAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            QuickSort.Sort(numbers);
+            var index = TernarySearch.Search(numbers, 4);
+            Console.WriteLine(index);
+        }
+
+        private static void BinarySearchAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            QuickSort.Sort(numbers);
+            var index = BinarySearch.Search(numbers, 4);
+            var indexRecursion = BinarySearch.SearchRecursion(numbers, 4);
+            Console.WriteLine(index);
+            Console.WriteLine(indexRecursion);
         }
 
         private static void LinearSearchAlgorithm()
         {
             int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
-            var index = LinearSearch.Search(numbers, 0);
+            var index = LinearSearch.Search(numbers, 4);
             Console.WriteLine(index);
         }
 
