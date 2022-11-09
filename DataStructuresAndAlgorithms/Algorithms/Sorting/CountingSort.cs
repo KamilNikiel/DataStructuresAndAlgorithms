@@ -1,8 +1,8 @@
 ﻿namespace DataStructuresAndAlgorithms.Algorithms.Sorting
 {
-    internal class CountingSort
+    internal static class CountingSort
     {
-        public void Sort(int[] array, int max)
+        public static void Sort(int[] array, int max)
         {
             var counts = new int[max + 1];
             for (var i = 0; i < array.Length; i++)

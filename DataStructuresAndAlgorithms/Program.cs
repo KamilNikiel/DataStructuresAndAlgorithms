@@ -1,6 +1,7 @@
 ﻿using DataStructuresAndAlgorithms.DataStructures.Fundamentals;
 using DataStructuresAndAlgorithms.DataStructures.Advanced;
 using DataStructuresAndAlgorithms.Algorithms.Sorting;
+using DataStructuresAndAlgorithms.Algorithms.Searching;
 
 namespace DataStructuresAndAlgorithms
 {
@@ -10,59 +11,59 @@ namespace DataStructuresAndAlgorithms
         {
         }
 
-        private static void BucketSort()
+        private static void LinearSearchAlgorithm()
         {
             int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
-            var sorter = new BucketSort();
-            sorter.Sort(numbers, 4);
+            var index = LinearSearch.Search(numbers, 0);
+            Console.WriteLine(index);
+        }
+
+        private static void BucketSortAlgorithm()
+        {
+            int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
+            BucketSort.Sort(numbers, 3);
             Console.WriteLine(String.Join(',', numbers));
         }
 
         private static void CountingSortAlgorithm()
         {
             int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
-            var sorter = new CountingSort();
-            sorter.Sort(numbers, 12);
+            CountingSort.Sort(numbers, 12);
             Console.WriteLine(String.Join(',', numbers));
         }
 
         private static void QuickSortAlgorithm()
         {
             int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
-            var sorter = new QuickSort();
-            sorter.Sort(numbers);
+            QuickSort.Sort(numbers);
             Console.WriteLine(String.Join(',', numbers));
         }
 
         private static void MergeSortAlgorithm()
         {
             int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
-            var sorter = new MergeSort();
-            sorter.Sort(numbers);
+            MergeSort.Sort(numbers);
             Console.WriteLine(String.Join(',', numbers));
         }
 
         private static void InsertionSortAlgorithm()
         {
             int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
-            var sorter = new InsertionSort();
-            sorter.Sort(numbers);
+            InsertionSort.Sort(numbers);
             Console.WriteLine(String.Join(',', numbers));
         }
 
         private static void SelectionSortAlgorithm()
         {
             int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
-            var sorter = new SelectionSort();
-            sorter.Sort(numbers);
+            SelectionSort.Sort(numbers);
             Console.WriteLine(String.Join(',', numbers));
         }
 
         private static void BubbleSortAlgorithm()
         {
             int[] numbers = { 3, 4, 5, 6, 12, 1, 2, 1, 4, 6, 0 };
-            var sorter = new BubbleSort();
-            sorter.Sort(numbers);
+            BubbleSort.Sort(numbers);
             Console.WriteLine(String.Join(',', numbers));
         }
 

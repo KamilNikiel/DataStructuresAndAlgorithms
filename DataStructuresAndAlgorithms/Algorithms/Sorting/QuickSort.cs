@@ -1,12 +1,12 @@
 ﻿namespace DataStructuresAndAlgorithms.Algorithms.Sorting
 {
-    internal class QuickSort
+    internal static class QuickSort
     {
-        public void Sort(int[] array)
+        public static void Sort(int[] array)
         {
             Sort(array, 0, array.Length - 1);
         }
-        private void Sort(int[] array, int start, int end)
+        private static void Sort(int[] array, int start, int end)
         {
             if (start >= end)
                 return;
@@ -17,7 +17,7 @@
             Sort(array, boundary + 1, end);
         }
 
-        private int Partition(int[] array, int start, int end)
+        private static int Partition(int[] array, int start, int end)
         {
             var pivot = array[end];
             var boundary = start - 1;

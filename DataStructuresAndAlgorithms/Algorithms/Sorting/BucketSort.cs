@@ -1,8 +1,8 @@
 ﻿namespace DataStructuresAndAlgorithms.Algorithms.Sorting
 {
-    internal class BucketSort
+    internal static class BucketSort
     {
-        public void Sort(int[] array, int numberOfBuckets)
+        public static void Sort(int[] array, int numberOfBuckets)
         {
             var index = 0;
             foreach (var bucket in CreateBuckets(array, numberOfBuckets))
@@ -20,7 +20,12 @@
                 buckets.Add(new List<int>());
 
             for (var i = 0; i < array.Length; i++)
+            {
+                if (buckets.Count < array[i] / numberOfBuckets)
+                    buckets[numberOfBuckets -1].Add(array[i]);
+                else
                 buckets[array[i] / numberOfBuckets].Add(array[i]);
+            }
 
             return buckets;
         }

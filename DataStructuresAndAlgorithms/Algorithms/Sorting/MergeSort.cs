@@ -1,8 +1,8 @@
 ﻿namespace DataStructuresAndAlgorithms.Algorithms.Sorting
 {
-    internal class MergeSort
+    internal static class MergeSort
     {
-        public void Sort(int[] array)
+        public static void Sort(int[] array)
         {
             if (array.Length < 2)
                 return;
@@ -26,7 +26,7 @@
             Merge(left, right, array);
         }
         
-        private void Merge(int[] left, int[] right, int[] result)
+        private static void Merge(int[] left, int[] right, int[] result)
         {
             int i = 0, j = 0, k = 0;
 

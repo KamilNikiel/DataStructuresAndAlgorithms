@@ -1,8 +1,8 @@
 ﻿namespace DataStructuresAndAlgorithms.Algorithms.Sorting
 {
-    internal class SelectionSort
+    internal static class SelectionSort
     {
-        public void Sort(int[] array)
+        public static void Sort(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {

@@ -1,8 +1,8 @@
 ﻿namespace DataStructuresAndAlgorithms.Algorithms.Sorting
 {
-    internal class BubbleSort
+    internal static class BubbleSort
     {
-        public void Sort(int[] array)
+        public static void Sort(int[] array)
         {
             bool isSorted;
             for (var i = 0; i < array.Length; i++)
